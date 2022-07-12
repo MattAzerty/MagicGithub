@@ -34,8 +34,7 @@ public class FakeApiService implements ApiService {
         // generate a random user from FAKE_USERS_RANDOM list while avoiding repetition as much as possible
 
         Random rand = new Random();
-        User randomUser = FAKE_USERS_RANDOM.get(rand.nextInt(FAKE_USERS_RANDOM.size()));
-
+        User randomUser = User.random();
 
         while (users.contains(randomUser)){
 
